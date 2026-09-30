@@ -1,0 +1,28 @@
+{
+  "name": "saucedemo-qa-automation",
+  "version": "1.0.0",
+  "description": "Suite de pruebas automatizadas E2E para Sauce Demo con Playwright + Cucumber (BDD) y Page Object Model",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:login": "cucumber-js --tags @login",
+    "test:cart": "cucumber-js --tags @carrito",
+    "test:checkout": "cucumber-js --tags @checkout",
+    "test:negative": "cucumber-js --tags @negativo",
+    "test:headed": "cross-env HEADLESS=false PARALLEL=1 SLOW_MO=300 cucumber-js",
+    "test:firefox": "cross-env BROWSER=firefox cucumber-js",
+    "test:webkit": "cross-env BROWSER=webkit cucumber-js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["playwright", "cucumber", "bdd", "qa", "automation", "page-object-model"],
+  "license": "Angel Salvador",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.14.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
